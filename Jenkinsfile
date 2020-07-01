@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("dp2970/fosso")
+        app = docker.build("my-image:${env.BUILD_ID}")
     }
 
     stage('Test image') {
